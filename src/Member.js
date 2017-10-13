@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Card, CardText} from 'material-ui/Card';
+import CardWrapper from './CardWrapper';
 
 /* eslint-disable react/prefer-stateless-function */
 class Member extends React.PureComponent {
@@ -11,11 +12,13 @@ class Member extends React.PureComponent {
 
     render () {
         return (
-            <Card>
-                <CardText>
-                    <span>Member {this.props.name}</span>
-                </CardText>
-            </Card>
+            <CardWrapper>
+                <Card>
+                    <CardText>
+                        <div>{this.props.name}</div>
+                    </CardText>
+                </Card>
+            </CardWrapper>
         );
     }
 }
